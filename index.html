@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payooo Login form</title>
-    
-    <!-- tailwind css -->
+    <!-- daisy ui cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind css cdn-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<body>
-    <form>
+
+<body class="bg-[#F4F5F7] h-[100vh]  flex justify-center flex-col items-center">
+    <div class="logo bg-[url:]">
+        <img src="assets/bg.png" alt="">
+    </div>
+    <form class=" bg-white  rounded-2xl p-5 w-[350px] font-semibold">
+        <div>
+            <label for="mobile-number">Mobile Number</label>
+            <br>
+            <input type="text" id="mobile-number" placeholder="Enter your number" class="input mt-2 rounded-3xl">
+        </div>
+        <div class="mt-4">
+            <label for="pin-number">4 Digit pin</label>
+            <br>
+            <input type="text" id="pin-number" placeholder="Enter  4 digit pin" class="input mt-2 rounded-3xl">
+        </div>
+        <button type="button" class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="login-btn">Login</button>
 
     </form>
+
+
+
+
+
+
+
+    <!-- js script  -->
+    <script src="script.js"></script>
 </body>
+
 </html>
