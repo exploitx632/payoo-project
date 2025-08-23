@@ -2,15 +2,19 @@ document
   .getElementById("addMoney-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    let availableBalance = parseInt(
+    let balance = parseInt(
       document.getElementById("balance").innerText
     );
 
+    const card = document.getElementById("cards").value;
+    const cardNumber = document.getElementById("cardNumber").value;
+
     let addMoney = parseInt(document.getElementById("addMoney").value);
 
-    if (typeof addMoney === "number") {
-      console.log(availableBalance + addMoney);
-    }else{
-        alert="Invalid Number";
-    }
+    const pin = document.getElementById("pin").value;
+    let totalBalance = balance + addMoney;
+    
+    
+    let currentBalance = document.getElementById("balance").innerText = totalBalance;
+
   });
