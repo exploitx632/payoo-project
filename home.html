@@ -64,7 +64,7 @@
             </div>
             <!-- get bonus  -->
             <div
-                class="bonus flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl">
+                class="bonus flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl" id="bonus">
                 <img src="assets/bonus1.png" alt="">
                 <h1 class="mt-5">Get Bonus</h1>
             </div>
@@ -83,7 +83,7 @@
         </section>
     </div>
     <!-- home section  -->
-    <div class="max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="home">
+    <div class="hidden max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="home">
         <div class="flex justify-between pr-9">
             <h1 class="text-xl font-bold mb-3.5">Latest Payment</h1>
             <p class="text-[#080808b1]">View all</p>
@@ -228,6 +228,21 @@
             </div>
             <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="transfer-btn">Ready to
                 transfer</button>
+
+        </form>
+    </div>
+
+    <!-- get bonus section  -->
+
+    <div class="hidden max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="bonus-form">
+        <h1 class="text-xl font-semibold mb-3.5">Get bonus</h1>
+        <form class="  bg-white p-4 rounded-2xl">
+            <div>
+                <label for="coupon" class="  font-medium">Enter bonus coupon</label>
+                <input type="text" placeholder="Enter your coupon "
+                    class="input border-none mt-3 py-2.5 mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="coupon" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="bonus-btn">Get Bonus</button>
 
         </form>
     </div>

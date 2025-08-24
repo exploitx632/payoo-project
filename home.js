@@ -3,6 +3,7 @@ document.getElementById("logout-btn").addEventListener("click", function () {
 });
 
 let validPin = 1234;
+let validCoupon = 'GetBonus';
 
 // featured Elements
 const homeSection = document.getElementById('home')
@@ -13,15 +14,24 @@ const addMoneyBtn = document.getElementById("addMoney-btn");
 const cashOut = document.getElementById("cash-out");
 const cashOutForm = document.getElementById("cashOut-form");
 const cashOutBtn = document.getElementById("cash-out-btn");
+
 const transfer = document.getElementById('transfer');
 const transferForm = document.getElementById('transfer-form');
 const transferBtn = document.getElementById('transfer-btn');
+
+const bonus = document.getElementById('bonus');
+const bonusForm = document.getElementById('bonus-form');
+const bonusBtn = document.getElementById('bonus-btn');
 
 // add money form
 addMoney.addEventListener("click", function () {
   addMoneyForm.classList.remove("hidden");
   cashOutForm.classList.add("hidden");
   homeSection.classList.add("hidden");
+  bonusForm.classList.add('hidden');
+  transferForm.classList.add('hidden');
+
+
 });
 // add money btn
 addMoneyBtn.addEventListener("click", function (event) {
@@ -51,7 +61,10 @@ addMoneyBtn.addEventListener("click", function (event) {
 cashOut.addEventListener("click", function () {
   addMoneyForm.classList.add("hidden");
   homeSection.classList.add("hidden");
+  bonusForm.classList.add('hidden');
   cashOutForm.classList.remove("hidden");
+  transferForm.classList.add('hidden');
+
 });
 
 //cash out btn
@@ -86,11 +99,11 @@ cashOutBtn.addEventListener("click", function (event) {
 // transfer form 
 
 transfer.addEventListener('click',function(event){
-  event.preventDefault();
   addMoneyForm.classList.add("hidden");
   homeSection.classList.add("hidden");
   cashOutForm.classList.add("hidden");
-  transferForm.classList.remove('hidden')
+  bonusForm.classList.add('hidden');
+  transferForm.classList.remove('hidden');
 });
 
 // transfer btn 
@@ -120,4 +133,28 @@ transferBtn.addEventListener('click',function(event){
 
   document.getElementById('transfer').value = 0;
 
+})
+
+// bonus form 
+
+bonus.addEventListener('click',function(event){
+  addMoneyForm.classList.add("hidden");
+  homeSection.classList.add("hidden");
+  cashOutForm.classList.add("hidden");
+  transferForm.classList.add('hidden');
+  bonusForm.classList.remove('hidden');
+});
+
+// bonus btn 
+
+bonusBtn.addEventListener('click',function(event){
+  // event.preventDefault();
+  
+  const couponNumber = document.getElementById('coupon').value;
+  if(couponNumber === validCoupon){
+    balance.innerText = parseInt(balance.innerText) + 200;
+    alert('You have got $200');
+  }else{
+    alert('Invalid Coupon');
+  }
 })
