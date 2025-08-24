@@ -143,9 +143,6 @@ transferBtn.addEventListener('click',function(event){
   }
   let totalBalance = balance - transferAmount;
   document.getElementById("balance").innerText = totalBalance;
-
-  document.getElementById('transfer').value = 0;
-
 })
 
 // bonus form 
