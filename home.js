@@ -164,11 +164,11 @@ bonus.addEventListener('click',function(event){
 // bonus btn 
 
 bonusBtn.addEventListener('click',function(event){
-  // event.preventDefault();
-  
+  event.preventDefault();
+  let balance = parseInt(document.getElementById("balance").innerText);
   const couponNumber = document.getElementById('coupon').value;
   if(couponNumber === validCoupon){
-    balance.innerText = parseInt(balance.innerText) + 200;
+    document.getElementById('balance').innerText = balance + 200;
     alert('You have got $200');
   }else{
     alert('Invalid Coupon');
