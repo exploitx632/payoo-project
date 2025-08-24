@@ -27,6 +27,9 @@ const bill = document.getElementById('bill');
 const billForm = document.getElementById('bill-form');
 const billBtn = document.getElementById('pay-btn');
 
+const transaction = document.getElementById('transactions');
+const transactionForm = document.getElementById('transaction-form');
+
 // add money form
 addMoney.addEventListener("click", function () {
   addMoneyForm.classList.remove("hidden");
@@ -35,7 +38,7 @@ addMoney.addEventListener("click", function () {
   bonusForm.classList.add('hidden');
   transferForm.classList.add('hidden');
   billForm.classList.add('hidden');
-
+  transactionForm.classList.add("hidden");
 
 });
 // add money btn
@@ -70,6 +73,7 @@ cashOut.addEventListener("click", function () {
   cashOutForm.classList.remove("hidden");
   transferForm.classList.add('hidden');
   billForm.classList.add('hidden');
+  transactionForm.classList.add("hidden");
 
 });
 
@@ -111,6 +115,8 @@ transfer.addEventListener('click',function(event){
   bonusForm.classList.add('hidden');
   transferForm.classList.remove('hidden');
   billForm.classList.add('hidden');
+  transactionForm.classList.add("hidden");
+
 
 });
 
@@ -152,6 +158,7 @@ bonus.addEventListener('click',function(event){
   transferForm.classList.add('hidden');
   bonusForm.classList.remove('hidden');
   billForm.classList.add('hidden');
+  transactionForm.classList.add("hidden");
 
 });
 
@@ -178,6 +185,7 @@ bill.addEventListener('click',function(){
   transferForm.classList.add('hidden');
   bonusForm.classList.add('hidden');
   billForm.classList.remove('hidden');
+  transactionForm.classList.add("hidden");
 });
 
 // bill btn 
@@ -204,4 +212,14 @@ billBtn.addEventListener('click',function(event){
   }
   let totalBalance = balance - payAmount;
   document.getElementById("balance").innerText = totalBalance;
+})
+
+transaction.addEventListener('click',function(){
+  addMoneyForm.classList.add("hidden");
+  homeSection.classList.add("hidden");
+  cashOutForm.classList.add("hidden");
+  transferForm.classList.add('hidden');
+  bonusForm.classList.add('hidden');
+  billForm.classList.add('hidden');
+  transactionForm.classList.remove("hidden");
 })
