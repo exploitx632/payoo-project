@@ -22,12 +22,13 @@
         <div class="flex gap-[15px]">
             <img src="assets/Group.png" class="h-[50px]" alt="">
             <div class="balance">
-                <p class="mb-1 font-semibold">$<span id="balance">5000</span></p>
+                <p class="mb-1 font-semibold">$<span id="balance">0</span></p>
                 <p class="text-[#0808087a]">available balance</p>
             </div>
 
         </div>
-        <button class="btn text-[#0808087a] " id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 "></i>
+        <button class="btn text-[#0808087a] " id="logout-btn"><i
+                class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 "></i>
             Log
             Out</button>
     </nav>
@@ -42,7 +43,7 @@
             </p>
         </section>
 
-        <section class="manu max-w-lg mx-auto h-auto grid grid-cols-3 grid-rows-2 gap-[20px] mt-7 ">
+        <section class="manu text-[#080808b1] max-w-lg mx-auto h-auto grid grid-cols-3 grid-rows-2 gap-[10px] mt-7 ">
             <!-- add money  -->
             <div id="add-money"
                 class="add-money flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl">
@@ -50,8 +51,8 @@
                 <h1 class="mt-5">Add Money</h1>
             </div>
             <!-- cashout  -->
-            <div
-                class="cahsout flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl" id="cash-out">
+            <div class="cahsout flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl"
+                id="cash-out">
                 <img src="assets/send1.png" alt="">
                 <h1 class="mt-5">Cashout</h1>
             </div>
@@ -81,7 +82,69 @@
             </div>
         </section>
     </div>
-
+    <!-- home section  -->
+    <div class="  max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="home">
+        <div class="flex justify-between pr-9">
+            <h1 class="text-xl font-bold mb-3.5">Latest Payment</h1>
+            <p class="text-[#080808b1]">View all</p>
+        </div>
+        <div class=" text-[#080808b1] payment bg-white p-4 rounded-2xl flex justify-between items-center mb-3.5">
+            <div class=" flex items-center gap-4 " id="payment">
+                <div class="logo bg-gray-100 rounded-full h-14 w-14 flex justify-center items-center"><img
+                        src="assets/wallet1.png" alt="">
+                </div>
+                <div class="description">
+                    <h1 class="font-semibold">Electricity Bill</h1>
+                    <p>Today 01:44 AM</p>
+                </div>
+            </div>
+            <div class="text-2xl">
+                <i class="fa-solid fa-ellipsis fa-rotate-270"></i>
+            </div>
+        </div>
+        <div class=" text-[#080808b1] payment bg-white p-4 rounded-2xl flex justify-between items-center mb-3.5">
+            <div class=" flex items-center gap-4 " id="payment">
+                <div class="logo bg-gray-100 rounded-full h-14 w-14 flex justify-center items-center"><img
+                        src="assets/wallet1.png" alt="">
+                </div>
+                <div class="description">
+                    <h1 class="font-semibold">Bank Deposit</h1>
+                    <p>Today 01:44 AM</p>
+                </div>
+            </div>
+            <div class="text-2xl">
+                <i class="fa-solid fa-ellipsis fa-rotate-270"></i>
+            </div>
+        </div>
+        <div class=" text-[#080808b1] payment bg-white p-4 rounded-2xl flex justify-between items-center mb-3.5">
+            <div class=" flex items-center gap-4 " id="payment">
+                <div class="logo bg-gray-100 rounded-full h-14 w-14 flex justify-center items-center"><img
+                        src="assets/wallet1.png" alt="">
+                </div>
+                <div class="description">
+                    <h1 class="font-semibold">Mobile Recharge</h1>
+                    <p>Today 01:44 AM</p>
+                </div>
+            </div>
+            <div class="text-2xl">
+                <i class="fa-solid fa-ellipsis fa-rotate-270"></i>
+            </div>
+        </div>
+        <div class=" text-[#080808b1] payment bg-white p-4 rounded-2xl flex justify-between items-center mb-3.5">
+            <div class=" flex items-center gap-4 " id="payment">
+                <div class="logo bg-gray-100 rounded-full h-14 w-14 flex justify-center items-center"><img
+                        src="assets/wallet1.png" alt="">
+                </div>
+                <div class="description">
+                    <h1 class="font-semibold">Gas Bill</h1>
+                    <p>Today 01:44 AM</p>
+                </div>
+            </div>
+            <div class="text-2xl">
+                <i class="fa-solid fa-ellipsis fa-rotate-270"></i>
+            </div>
+        </div>
+    </div>
     <!-- add money section  -->
     <div class="hidden max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="addMoney-form">
         <h1 class="text-xl font-bold mb-3.5">Add Money</h1>
@@ -98,51 +161,49 @@
             </div>
             <div>
                 <label for="card" class="mb-2">Card number</label>
-                <input  type="text" placeholder="Enter Card Number" class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="cardNumber"/>
+                <input type="text" placeholder="Enter Card Number"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="cardNumber" />
             </div>
             <div>
                 <label for="addMoney" class="mb-2">Amount to Add</label>
-                <input type="text" placeholder="Enter amount " class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="addMoney" />
+                <input type="text" placeholder="Enter amount "
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="addMoney" />
             </div>
             <div>
                 <label for="pin" class="mb-2">Pin Number</label>
-                <input type="text" placeholder="Enter your pin Number" class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="pin" />
+                <input type="text" placeholder="Enter your pin Number"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="pin" />
             </div>
             <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="addMoney-btn">Add
                 Money</button>
 
-        </form> 
+        </form>
     </div>
 
     <!-- cash out section  -->
-    <div class="max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="cashOut-form">
+    <div class="hidden max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="cashOut-form">
         <h1 class="text-xl font-bold mb-3.5">Cash Out</h1>
         <form class="cash-out-money bg-white p-4 rounded-2xl" id="cash-out-money">
+
             <div>
-                <h1 class="font-[500] mb-2">Select A Card</h1>
-                <select class="select text-[#0808087a] border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full " id="cards">
-                    <option disabled selected>Select card</option>
-                    <option>Visa</option>
-                    <option>Master</option>
-                    <option>Amex</option>
-                    <option>PayPal</option>
-                </select>
+                <label for="card" class="mb-2">Agent Number</label>
+                <input type="text" placeholder="Enter Agent Number"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="AgentNumber" />
             </div>
             <div>
-                <label for="card" class="mb-2">Card number</label>
-                <input  type="text" placeholder="Enter Card Number" class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="cardNumber"/>
-            </div>
-            <div>
-                <label for="cashOut" class="mb-2">Amount to Withdraw</label>
-                <input type="text" placeholder="Enter amount " class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="cashOut" />
+                <label for="cashOut" class="mb-2">Amount to Cash Out</label>
+                <input type="text" placeholder="Enter amount "
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="cashOut" />
             </div>
             <div>
                 <label for="pin" class="mb-2">Pin Number</label>
-                <input type="text" placeholder="Enter your pin Number" class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="pin" />
+                <input type="text" placeholder="Enter your pin Number"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="cashOutPin" />
             </div>
-            <button type="button" class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="cash-out-btn">Withdraw Money</button>
+            <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="cash-out-btn">Withdraw
+                Money</button>
 
-        </form> 
+        </form>
     </div>
 
 
@@ -151,7 +212,7 @@
 
 
     <!-- js script  -->
-     <script src="home.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>
