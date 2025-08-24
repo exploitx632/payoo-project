@@ -102,7 +102,6 @@ cashOutBtn.addEventListener("click", function (event) {
   let totalBalance = balance - cashOutAmount;
   document.getElementById("balance").innerText = totalBalance;
 
-  document.getElementById('cashOut').value = 0;
 });
 
 
