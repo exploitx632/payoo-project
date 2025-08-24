@@ -22,7 +22,7 @@
         <div class="flex gap-[15px]">
             <img src="assets/Group.png" class="h-[50px]" alt="">
             <div class="balance">
-                <p class="mb-1 font-semibold">$<span id="balance">0</span></p>
+                <p class="mb-1 font-semibold">$<span id="balance">50000</span></p>
                 <p class="text-[#0808087a]">available balance</p>
             </div>
 
@@ -42,7 +42,7 @@
             <p class="text-[#0808087a]">Enjoy easy and convenient financial services with us. Cashout charge is low and
             </p>
         </section>
-
+        <!-- menu section  -->
         <section class="manu text-[#080808b1] max-w-lg mx-auto h-auto grid grid-cols-3 grid-rows-2 gap-[10px] mt-7 ">
             <!-- add money  -->
             <div id="add-money"
@@ -58,7 +58,7 @@
             </div>
             <!-- transfer money  -->
             <div
-                class="transfer flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl">
+                class="transfer flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl" id="transfer">
                 <img src="assets/money1.png" alt="">
                 <h1 class="mt-5 ">Transfer Money</h1>
             </div>
@@ -83,7 +83,7 @@
         </section>
     </div>
     <!-- home section  -->
-    <div class="  max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="home">
+    <div class="max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="home">
         <div class="flex justify-between pr-9">
             <h1 class="text-xl font-bold mb-3.5">Latest Payment</h1>
             <p class="text-[#080808b1]">View all</p>
@@ -202,6 +202,32 @@
             </div>
             <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="cash-out-btn">Withdraw
                 Money</button>
+
+        </form>
+    </div>
+
+    <!-- transfer money section  -->
+    <div class="hidden max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="transfer-form">
+        <h1 class="text-xl font-bold mb-3.5">Transfer Money</h1>
+        <form class="transfer  bg-white p-4 rounded-2xl" id="Transfer-money">
+
+            <div>
+                <label for="userNumber" class="mb-2">User Account Number</label>
+                <input type="text" placeholder="Enter user account"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="userNumber" />
+            </div>
+            <div>
+                <label for="transfer" class="mb-2">Transfer Amount</label>
+                <input type="text" placeholder="Enter amount "
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="transferAmount" />
+            </div>
+            <div>
+                <label for="pin" class="mb-2">Pin Number</label>
+                <input type="text" placeholder="Enter your pin Number"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="transferPin" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="transfer-btn">Ready to
+                transfer</button>
 
         </form>
     </div>

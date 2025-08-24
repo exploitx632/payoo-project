@@ -13,6 +13,9 @@ const addMoneyBtn = document.getElementById("addMoney-btn");
 const cashOut = document.getElementById("cash-out");
 const cashOutForm = document.getElementById("cashOut-form");
 const cashOutBtn = document.getElementById("cash-out-btn");
+const transfer = document.getElementById('transfer');
+const transferForm = document.getElementById('transfer-form');
+const transferBtn = document.getElementById('transfer-btn');
 
 // add money form
 addMoney.addEventListener("click", function () {
@@ -78,3 +81,43 @@ cashOutBtn.addEventListener("click", function (event) {
 
   document.getElementById('cashOut').value = 0;
 });
+
+
+// transfer form 
+
+transfer.addEventListener('click',function(event){
+  event.preventDefault();
+  addMoneyForm.classList.add("hidden");
+  homeSection.classList.add("hidden");
+  cashOutForm.classList.add("hidden");
+  transferForm.classList.remove('hidden')
+});
+
+// transfer btn 
+
+transferBtn.addEventListener('click',function(event){
+  event.preventDefault();
+  let balance = parseInt(document.getElementById("balance").innerText);
+  const userNumber = document.getElementById("userNumber").value;
+  const transferAmount = parseInt(document.getElementById("transferAmount").value);
+   
+  if(balance === 0){
+    alert('Not available balance to transfer');
+    return;
+  }
+  if (userNumber.length < 16) {
+    alert("Invalid User");
+    return;
+  }
+
+  const transferPin = parseInt(document.getElementById("transferPin").value);
+  if (transferPin !== validPin) {
+    alert("Invalid Pin");
+    return;
+  }
+  let totalBalance = balance - transferAmount;
+  document.getElementById("balance").innerText = totalBalance;
+
+  document.getElementById('transfer').value = 0;
+
+})
