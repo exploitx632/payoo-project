@@ -23,6 +23,10 @@ const bonus = document.getElementById('bonus');
 const bonusForm = document.getElementById('bonus-form');
 const bonusBtn = document.getElementById('bonus-btn');
 
+const bill = document.getElementById('bill');
+const billForm = document.getElementById('bill-form');
+const billBtn = document.getElementById('pay-btn');
+
 // add money form
 addMoney.addEventListener("click", function () {
   addMoneyForm.classList.remove("hidden");
@@ -30,6 +34,7 @@ addMoney.addEventListener("click", function () {
   homeSection.classList.add("hidden");
   bonusForm.classList.add('hidden');
   transferForm.classList.add('hidden');
+  billForm.classList.add('hidden');
 
 
 });
@@ -64,6 +69,7 @@ cashOut.addEventListener("click", function () {
   bonusForm.classList.add('hidden');
   cashOutForm.classList.remove("hidden");
   transferForm.classList.add('hidden');
+  billForm.classList.add('hidden');
 
 });
 
@@ -104,6 +110,8 @@ transfer.addEventListener('click',function(event){
   cashOutForm.classList.add("hidden");
   bonusForm.classList.add('hidden');
   transferForm.classList.remove('hidden');
+  billForm.classList.add('hidden');
+
 });
 
 // transfer btn 
@@ -143,6 +151,8 @@ bonus.addEventListener('click',function(event){
   cashOutForm.classList.add("hidden");
   transferForm.classList.add('hidden');
   bonusForm.classList.remove('hidden');
+  billForm.classList.add('hidden');
+
 });
 
 // bonus btn 
@@ -157,4 +167,41 @@ bonusBtn.addEventListener('click',function(event){
   }else{
     alert('Invalid Coupon');
   }
+})
+
+// bill form 
+
+bill.addEventListener('click',function(){
+  addMoneyForm.classList.add("hidden");
+  homeSection.classList.add("hidden");
+  cashOutForm.classList.add("hidden");
+  transferForm.classList.add('hidden');
+  bonusForm.classList.add('hidden');
+  billForm.classList.remove('hidden');
+});
+
+// bill btn 
+
+billBtn.addEventListener('click',function(event){
+  event.preventDefault();
+  let balance = parseInt(document.getElementById('balance').innerText);
+  const payCard = document.getElementById("payCardNumber").value;
+  const payAmount = parseInt(document.getElementById("amount-pay").value);
+   
+  if(balance === 0){
+    alert('Not available balance to pay');
+    return;
+  }
+  if (payCard.length < 16) {
+    alert("Invalid User");
+    return;
+  }
+
+  const payPin = parseInt(document.getElementById("payPin").value);
+  if (payPin !== validPin) {
+    alert("Invalid Pin");
+    return;
+  }
+  let totalBalance = balance - payAmount;
+  document.getElementById("balance").innerText = totalBalance;
 })

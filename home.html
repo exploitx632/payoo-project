@@ -70,7 +70,7 @@
             </div>
             <!-- pay bill  -->
             <div
-                class="paybill flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl">
+                class="paybill flex flex-col justify-center items-center border-[1px] border-gray-300 p-3 text-center rounded-2xl" id="bill">
                 <img src="assets/purse1.png" alt="">
                 <h1 class="mt-5">Pay Bill</h1>
             </div>
@@ -247,6 +247,39 @@
         </form>
     </div>
 
+    <!-- pay bill section  -->
+    <div class="hidden max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="bill-form">
+        <h1 class="text-xl font-bold mb-3.5">Add Money</h1>
+        <form class="billing bg-white p-4 rounded-2xl" id="billing">
+            <div>
+                <h1 class="font-[500] mb-2">Select Card to Pay</h1>
+                <select class="select text-[#0808087a] border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full " id="cards">
+                    <option disabled selected>Select card</option>
+                    <option>Visa</option>
+                    <option>Master</option>
+                    <option>Amex</option>
+                    <option>PayPal</option>
+                </select>
+            </div>
+            <div>
+                <label for="payCardNumber"  class="mb-2">Card number</label>
+                <input type="text" placeholder="Enter Card Number"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="payCardNumber" />
+            </div>
+            <div>
+                <label for="amount-pay" class="mb-2">Amount to pay</label>
+                <input type="text" placeholder="Add amount to pay"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="amount-pay" />
+            </div>
+            <div>
+                <label for="pin" class="mb-2">Pin Number</label>
+                <input type="text" placeholder="Enter your pin Number"
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="payPin" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="pay-btn">Pay Now</button>
+
+        </form>
+    </div>
 
 
 
