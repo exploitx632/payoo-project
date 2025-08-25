@@ -1,13 +1,12 @@
 document.getElementById("logout-btn").addEventListener("click", function () {
   window.location.href = "./index.html";
-  document.body.style.height='120vh';
 });
 
 let validPin = 1234;
 let validCoupon = 'GetBonus';
 
 // featured Elements
-const homeSection = document.getElementById('home')
+const homeSection = document.getElementById('home-section')
 const addMoney = document.getElementById("add-money-menu");
 const addMoneyForm = document.getElementById("add-money-form");
 const addMoneyBtn = document.getElementById("add-money-btn");
@@ -40,8 +39,8 @@ addMoney.addEventListener("click", function () {
   transferForm.classList.add('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.add("hidden");
-  document.body.style.height='120vh';
-
+  window.scrollTo(0, 0);
+  document.body.style.height = 'auto';
 });
 // add money btn
 addMoneyBtn.addEventListener("click", function (event) {
@@ -69,13 +68,14 @@ addMoneyBtn.addEventListener("click", function (event) {
 });
 // cash out form
 cashOut.addEventListener("click", function () {
-  addMoneyForm.classList.add("hidden");
   homeSection.classList.add("hidden");
+  addMoneyForm.classList.add("hidden");
   bonusForm.classList.add('hidden');
-  cashOutForm.classList.remove("hidden");
   transferForm.classList.add('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.add("hidden");
+  cashOutForm.classList.remove("hidden");
+  window.scrollTo(0, 0);
 
 });
 
@@ -117,7 +117,7 @@ transfer.addEventListener('click',function(event){
   transferForm.classList.remove('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.add("hidden");
-
+  window.scrollTo(0, 0);
 
 });
 
@@ -157,7 +157,7 @@ bonus.addEventListener('click',function(event){
   bonusForm.classList.remove('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.add("hidden");
-
+  window.scrollTo(0, 0);
 });
 
 // bonus btn 
@@ -184,7 +184,8 @@ bill.addEventListener('click',function(){
   bonusForm.classList.add('hidden');
   billForm.classList.remove('hidden');
   transactionForm.classList.add("hidden");
-  document.body.style.height='120vh';
+  window.scrollTo(0, 0);
+  document.body.style.height='auto';
 
 });
 
@@ -222,6 +223,7 @@ transaction.addEventListener('click',function(){
   bonusForm.classList.add('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.remove("hidden");
-  document.body.style.height='120vh';
+  window.scrollTo(0, 0);
+  document.body.style.height='auto';
 
 })
