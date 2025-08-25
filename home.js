@@ -7,8 +7,8 @@ let validCoupon = 'GetBonus';
 
 // featured Elements
 const homeSection = document.getElementById('home')
-const addMoney = document.getElementById("add-money");
-const addMoneyForm = document.getElementById("addMoney-form");
+const addMoney = document.getElementById("add-money-menu");
+const addMoneyForm = document.getElementById("add-money-form");
 const addMoneyBtn = document.getElementById("addMoney-btn");
 
 const cashOut = document.getElementById("cash-out");
@@ -23,11 +23,11 @@ const bonus = document.getElementById('bonus');
 const bonusForm = document.getElementById('bonus-form');
 const bonusBtn = document.getElementById('bonus-btn');
 
-const bill = document.getElementById('bill');
+const bill = document.getElementById('bill-menu');
 const billForm = document.getElementById('bill-form');
 const billBtn = document.getElementById('pay-btn');
 
-const transaction = document.getElementById('transactions');
+const transaction = document.getElementById('transaction-menu');
 const transactionForm = document.getElementById('transaction-form');
 
 // add money form
