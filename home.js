@@ -1,5 +1,6 @@
 document.getElementById("logout-btn").addEventListener("click", function () {
   window.location.href = "./index.html";
+  document.body.style.height='120vh';
 });
 
 let validPin = 1234;
@@ -39,6 +40,7 @@ addMoney.addEventListener("click", function () {
   transferForm.classList.add('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.add("hidden");
+  document.body.style.height='120vh';
 
 });
 // add money btn
@@ -182,6 +184,8 @@ bill.addEventListener('click',function(){
   bonusForm.classList.add('hidden');
   billForm.classList.remove('hidden');
   transactionForm.classList.add("hidden");
+  document.body.style.height='120vh';
+
 });
 
 // bill btn 
@@ -218,4 +222,6 @@ transaction.addEventListener('click',function(){
   bonusForm.classList.add('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.remove("hidden");
+  document.body.style.height='120vh';
+
 })
