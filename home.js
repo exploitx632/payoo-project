@@ -1,5 +1,6 @@
 document.getElementById("logout-btn").addEventListener("click", function () {
   window.location.href = "./index.html";
+  window.scrollTo(0, 0);
 });
 
 let validPin = 1234;
