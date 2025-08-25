@@ -40,7 +40,6 @@ addMoney.addEventListener("click", function () {
   transferForm.classList.add('hidden');
   billForm.classList.add('hidden');
   transactionForm.classList.add("hidden");
-  window.scrollTo(0, 0);
   document.body.style.height = 'auto';
 });
 // add money btn
@@ -186,7 +185,6 @@ bill.addEventListener('click',function(){
   billForm.classList.remove('hidden');
   transactionForm.classList.add("hidden");
   window.scrollTo(0, 0);
-  document.body.style.height='auto';
 
 });
 
@@ -225,6 +223,5 @@ transaction.addEventListener('click',function(){
   billForm.classList.add('hidden');
   transactionForm.classList.remove("hidden");
   window.scrollTo(0, 0);
-  document.body.style.height='auto';
 
 })
