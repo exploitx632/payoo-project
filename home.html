@@ -151,7 +151,7 @@
         <form class="add-money bg-white p-4 rounded-2xl" id="add-money">
             <div>
                 <h1 class="font-[500] mb-2">Select A Card</h1>
-                <select class="select text-[#0808087a] border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full " id="cards">
+                <select class="select text-[#0808087a] border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full " id="add-money-cards">
                     <option disabled selected>Select card</option>
                     <option>Visa</option>
                     <option>Master</option>
@@ -160,21 +160,21 @@
                 </select>
             </div>
             <div>
-                <label for="card" class="mb-2">Card number</label>
+                <label for="add-money-cardNumber" class="mb-2">Card number</label>
                 <input type="text" placeholder="Enter Card Number"
-                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="cardNumber" />
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="add-money-cardNumber" />
             </div>
             <div>
                 <label for="addMoney" class="mb-2">Amount to Add</label>
                 <input type="text" placeholder="Enter amount "
-                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="addMoney" />
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="add-money" />
             </div>
             <div>
                 <label for="pin" class="mb-2">Pin Number</label>
                 <input type="text" placeholder="Enter your pin Number"
-                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="pin" />
+                    class="input border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full" id="add-money-pin" />
             </div>
-            <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="addMoney-btn">Add
+            <button class="btn bg-[#0874F2] text-white w-full rounded-3xl mt-4" id="add-money-btn">Add
                 Money</button>
 
         </form>
@@ -250,10 +250,10 @@
     <!-- pay bill section  -->
     <div class="hidden min-h-[50%] max-w-lg mx-auto py-7 px-5 rounded-b-2xl" id="bill-form">
         <h1 class="text-xl font-bold mb-3.5">Pay Bill</h1>
-        <form class="billing bg-white p-4 rounded-2xl" id="billing">
+        <form class="billing bg-white p-4 rounded-2xl" id="billing-form">
             <div>
                 <h1 class="font-[500] mb-2">Select Card to Pay</h1>
-                <select class="select text-[#0808087a] border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full " id="cards">
+                <select class="select text-[#0808087a] border-none mb-2 bg-[#F4F5F7] rounded-3xl w-full " id="billing-cards">
                     <option disabled selected>Select card</option>
                     <option>Visa</option>
                     <option>Master</option>

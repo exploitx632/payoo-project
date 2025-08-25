@@ -9,7 +9,7 @@ let validCoupon = 'GetBonus';
 const homeSection = document.getElementById('home')
 const addMoney = document.getElementById("add-money-menu");
 const addMoneyForm = document.getElementById("add-money-form");
-const addMoneyBtn = document.getElementById("addMoney-btn");
+const addMoneyBtn = document.getElementById("add-money-btn");
 
 const cashOut = document.getElementById("cash-out");
 const cashOutForm = document.getElementById("cashOut-form");
@@ -46,15 +46,15 @@ addMoneyBtn.addEventListener("click", function (event) {
   event.preventDefault();
   let balance = parseInt(document.getElementById("balance").innerText);
   const card = document.getElementById("cards").value;
-  const cardNumber = document.getElementById("cardNumber").value;
+  const cardNumber = document.getElementById("add-money-cardNumber").value;
 
-  let amount = parseInt(document.getElementById("addMoney").value);
+  let amount = parseInt(document.getElementById("add-money").value);
 
   if (cardNumber.length != 16) {
     alert("Invalid Card Number");
     return;
   }
-  const pin = parseInt(document.getElementById("pin").value);
+  const pin = parseInt(document.getElementById("add-money-pin").value);
 
   if (pin !== validPin) {
     alert("Invalid Pin");
