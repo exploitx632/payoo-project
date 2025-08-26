@@ -7,28 +7,25 @@ let validCoupon = "GetBonus";
 
 // featured Elements
 const homeSection = document.getElementById("home-section");
-const addMoney = document.getElementById("add-money-menu");
-const addMoneyForm = document.getElementById("add-money-form");
-const addMoneyBtn = document.getElementById("add-money-btn");
+// get element 
 
-const cashOut = document.getElementById("cash-out");
-const cashOutForm = document.getElementById("cashOut-form");
-const cashOutBtn = document.getElementById("cash-out-btn");
+function getElement(id){
+  const element = document.getElementById(id);
+  return element;
+}
 
-const transfer = document.getElementById("transfer");
-const transferForm = document.getElementById("transfer-form");
-const transferBtn = document.getElementById("transfer-btn");
+// btn style 
+function btnStyle(id){
+  let btns = document.getElementsByClassName('form-btn');
+  for(let btn of btns){
+    btn.classList.remove('border-[#0874f2]','bg-[#0874f20d');
+    btn.classList.add("border-gray-300")
 
-const bonus = document.getElementById("bonus");
-const bonusForm = document.getElementById("bonus-form");
-const bonusBtn = document.getElementById("bonus-btn");
+  }
+  getElement(id).classList.remove("border-gray-300")
+  getElement(id).classList.add('border-[#0874f2]','bg-[#0874f20d]');
+}
 
-const bill = document.getElementById("bill-menu");
-const billForm = document.getElementById("bill-form");
-const billBtn = document.getElementById("pay-btn");
-
-const transaction = document.getElementById("transaction-menu");
-const transactionForm = document.getElementById("transaction-form");
 
 
 
@@ -61,18 +58,24 @@ function setInnerText(value) {
   let availableBalance = document.getElementById("balance");
   availableBalance.innerText = value;
 }
+
+
+// handle toggle features 
+function handleToggle(id){
+  const forms = document.getElementsByClassName('form');
+  for(let form of forms){
+    form.classList.add('hidden')
+  }
+  getElement(id).classList.remove('hidden')
+};
 // add money form
-addMoney.addEventListener("click", function () {
-  addMoneyForm.classList.remove("hidden");
-  cashOutForm.classList.add("hidden");
-  homeSection.classList.add("hidden");
-  bonusForm.classList.add("hidden");
-  transferForm.classList.add("hidden");
-  billForm.classList.add("hidden");
-  transactionForm.classList.add("hidden");
+
+getElement('add-money-menu').addEventListener("click", function () {
+ handleToggle('add-money-form')
+ btnStyle('add-money-menu');
 });
 // add money btn
-addMoneyBtn.addEventListener("click", function (event) {
+getElement('add-money-btn').addEventListener("click", function (event) {
   event.preventDefault();
   let balance = getElementInnerNumber("balance");
   const card = document.getElementById("add-money-cards").value;
@@ -82,7 +85,6 @@ addMoneyBtn.addEventListener("click", function (event) {
   const cardNumber = getElementValue("add-money-cardNumber");
 
   if (cardNumber.length != 16) {
-    console.log(cardNumber.length);
     alert("Invalid Card Number");
     return;
   }
@@ -99,19 +101,16 @@ addMoneyBtn.addEventListener("click", function (event) {
   resetElement("addMoney-form").reset();
 });
 // cash out form
-cashOut.addEventListener("click", function () {
-  homeSection.classList.add("hidden");
-  addMoneyForm.classList.add("hidden");
-  bonusForm.classList.add("hidden");
-  transferForm.classList.add("hidden");
-  billForm.classList.add("hidden");
-  transactionForm.classList.add("hidden");
-  cashOutForm.classList.remove("hidden");
+
+getElement("cash-out").addEventListener("click", function () {
+  handleToggle('cashOut-form')
+  btnStyle('cash-out')
+  
 });
 
 //cash out btn
 
-cashOutBtn.addEventListener("click", function (event) {
+getElement('cash-out-btn').addEventListener("click", function (event) {
   event.preventDefault();
   let balance = getElementInnerNumber("balance");
   const agentNumber = getElementNumber("AgentNumber");
@@ -137,20 +136,13 @@ cashOutBtn.addEventListener("click", function (event) {
 });
 
 // transfer form
-
-transfer.addEventListener("click", function (event) {
-  addMoneyForm.classList.add("hidden");
-  homeSection.classList.add("hidden");
-  cashOutForm.classList.add("hidden");
-  bonusForm.classList.add("hidden");
-  transferForm.classList.remove("hidden");
-  billForm.classList.add("hidden");
-  transactionForm.classList.add("hidden");
+getElement("transfer").addEventListener("click", function () {
+  handleToggle('transfer-form')
 });
 
 // transfer btn
 
-transferBtn.addEventListener("click", function (event) {
+getElement('transfer-btn').addEventListener("click", function (event) {
   event.preventDefault();
   let balance = getElementInnerNumber("balance");
   const userNumber = getElementNumber("userNumber");
@@ -177,19 +169,13 @@ transferBtn.addEventListener("click", function (event) {
 
 // bonus form
 
-bonus.addEventListener("click", function (event) {
-  addMoneyForm.classList.add("hidden");
-  homeSection.classList.add("hidden");
-  cashOutForm.classList.add("hidden");
-  transferForm.classList.add("hidden");
-  bonusForm.classList.remove("hidden");
-  billForm.classList.add("hidden");
-  transactionForm.classList.add("hidden");
+getElement("bonus").addEventListener("click", function () {
+  handleToggle('bonus-form')
 });
 
 // bonus btn
 
-bonusBtn.addEventListener("click", function (event) {
+getElement('bonus-btn').addEventListener("click", function (event) {
   event.preventDefault();
   let balance = getElementInnerNumber('balance');
   const couponNumber = getElementValue('coupon');
@@ -204,20 +190,15 @@ bonusBtn.addEventListener("click", function (event) {
 });
 
 // bill form
-
-bill.addEventListener("click", function () {
-  addMoneyForm.classList.add("hidden");
-  homeSection.classList.add("hidden");
-  cashOutForm.classList.add("hidden");
-  transferForm.classList.add("hidden");
-  bonusForm.classList.add("hidden");
-  billForm.classList.remove("hidden");
-  transactionForm.classList.add("hidden");
+getElement("bill-menu").addEventListener("click", function () {
+  const forms = document.getElementsByClassName('form');
+  handleToggle('bill-form')
 });
+
 
 // bill btn
 
-billBtn.addEventListener("click", function (event) {
+getElement('pay-btn').addEventListener("click", function (event) {
   event.preventDefault();
   let balance = getElementInnerNumber('balance');
   const payCard = getElementNumber("payCardNumber");
@@ -243,12 +224,8 @@ billBtn.addEventListener("click", function (event) {
   resetElement('billing-form').reset();
 });
 
-transaction.addEventListener("click", function () {
-  addMoneyForm.classList.add("hidden");
-  homeSection.classList.add("hidden");
-  cashOutForm.classList.add("hidden");
-  transferForm.classList.add("hidden");
-  bonusForm.classList.add("hidden");
-  billForm.classList.add("hidden");
-  transactionForm.classList.remove("hidden");
+// transaction form  
+
+getElement("transaction-menu").addEventListener("click", function () {
+  handleToggle('transaction-form')
 });
